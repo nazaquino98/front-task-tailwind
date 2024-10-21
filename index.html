@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--link iconos -->
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-straight/css/uicons-regular-straight.css"
+    />
+    <title>Tareas CRUD</title>
+  </head>
+  <body>
+    <div
+      id="app"
+      class="bg-pink-200 text-pink-900 mt-10 sm:mx-auto sm:w-full sm:max-w-md p-6 rounded-lg shadow-md"
+    >
+      <h2 class="text-2xl font-bold mb-6 text-center text-pink-700">Nueva Tarea</h2>
+      <form id="create-task">
+        <div class="mb-4">
+          <label for="title" class="block text-sm font-medium text-pink-700"
+            >Nombre de la tarea:</label
+          >
+          <input
+            type="text"
+            name="title"
+            id="title"
+            class="mt-1 block w-full px-3 py-2 bg-pink-50 border border-pink-300 rounded-md text-pink-900 focus:outline-none focus:ring-2 focus:ring-pink-400"
+            placeholder="Ingrese el nombre de la tarea"
+          />
+        </div>
+
+        <div class="mb-4">
+          <label for="description" class="block text-sm font-medium text-pink-700"
+            >Descripción:</label
+          >
+          <input
+            type="text"
+            name="description"
+            id="description"
+            class="mt-1 block w-full px-3 py-2 bg-pink-50 border border-pink-300 rounded-md text-pink-900 focus:outline-none focus:ring-2 focus:ring-pink-400"
+            placeholder="Ingrese una descripcion de la tarea"
+          />
+        </div>
+
+        <div class="mb-6">
+          <label for="isComplete" class="inline-flex items-center text-pink-700">
+            <input
+              type="checkbox"
+              name="isComplete"
+              id="isComplete"
+              class="form-checkbox h-5 w-5 text-pink-600 bg-pink-50 border-pink-300 focus:ring-pink-400"
+            />
+            <span class="ml-2 text-sm">Marcar solo si esta completa la tarea</span>
+          </label>
+        </div>
+
+        <button
+          type="submit"
+          id="buttom-createTasks"
+          class="w-full py-2 px-4 bg-pink-600 hover:bg-pink-700 rounded-md text-white font-semibold focus:outline-none focus:ring-2 focus:ring-pink-400"
+        >
+          Crear Tarea
+        </button>
+      </form>
+
+      <div id="tasksList" class="mt-6"></div>
+    </div>
+    <script type="module" src="src/main.js"></script>
+  </body>
+</html>
